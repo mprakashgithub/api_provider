@@ -1,6 +1,8 @@
 import 'package:api_provider/models/country_model.dart';
 import 'package:api_provider/repository/api_network.dart';
 import 'package:api_provider/view/first.dart';
+import 'package:api_provider/view/search3.dart';
+import 'package:api_provider/view/search_data.dart';
 import 'package:api_provider/view/second.dart';
 import 'package:flutter/material.dart';
 
@@ -46,8 +48,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
         actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => Search3())));
+              },
+              icon: Icon(Icons.donut_large)),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => SearchListViewData())));
+              },
+              icon: Icon(Icons.donut_large)),
           IconButton(
               onPressed: () {
                 Navigator.push(context,
@@ -57,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => Second())));
+                    MaterialPageRoute(builder: ((context) => Search2())));
               },
               icon: Icon(Icons.nat))
         ],

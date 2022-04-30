@@ -51,6 +51,12 @@ class _FirstState extends State<First> {
                       },
                       child: Text("Update"),
                     ),
+                    MaterialButton(
+                      onPressed: () {
+                        provider.incrValue();
+                      },
+                      child: Text("Update"),
+                    ),
                   ],
                 );
               },

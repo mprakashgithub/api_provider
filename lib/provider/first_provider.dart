@@ -11,4 +11,9 @@ class FirstProvider extends ChangeNotifier {
     value = v;
     notifyListeners();
   }
+
+  void incrValue() {
+    value = ++value;
+    notifyListeners();
+  }
 }
